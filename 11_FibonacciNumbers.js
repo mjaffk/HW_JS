@@ -12,7 +12,7 @@
  * @return {boolean} true - является числом, false - не является числом
  */
 function isNumber(num) {
-    return !isNaN(parseFloat(num)) && isFinite(+num);ksjrhfiauwgflvegalygfl aysgdfl yg fagysf lasygdf agfkyasdkfy auyfg
+    return !isNaN(parseFloat(num)) && isFinite(+num);
 }
 
 //Получаем натуральное число n от пользователя
