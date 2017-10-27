@@ -2,33 +2,69 @@
 
 /**
  * Сравнивает объекты по значению
- * @param {*} obj1
- * @param {*} obj2
- * @return {boolean}
+ * @param {*} obj1 - переменная любого типа
+ * @param {*} obj2 - переменная любого типа
+ * @return {boolean} - результат проверки равенства переменных
  */
-deepEqual = function dE (obj1, obj2) {
-    // проверить на тип и то, что тип одинаковый
-    // если не объект - обычное сравнение
-    // если типы не совпадают - false
-    // если совпадают:
-    // перебор по каждому элементу и проверка с помощью этой же функции
-    if (typeof obj1 === typeof obj2){
-        outer:
-        if (typeof obj1 === 'object'){
-            if (obj1 !== null && obj2 !== null) {
-                for (let key1 in obj1 ){
-                    for (let key2 in obj2){
-                        return key1 === key2 && dE(obj1[key1],obj2[key2])
-                    }
-                }
-            }
-        }
-        return (obj1 === obj2);
+function deepEqual (obj1, obj2) {
+
+    if (typeof obj1 !== typeof obj2) {
+        return false;
     }
-    return false;
+
+    if (typeof obj1 !== 'object') {
+        if (typeof obj1 === 'function') {
+            return String(obj1) === String(obj2);
+        }
+        return obj1 === obj2;
+    }
+    if (obj1 === null || obj2 === null) {
+        return obj1 === obj2;
+    }
+
+    if (obj1.length !== 0 && obj2.length !== 0 && obj1.length === obj2.length) {
+        let result = true;
+        for (let key in obj1) {
+            result = result && deepEqual(obj1[key],obj2[key]);
+        }
+        return result;
+    }
+    return obj1.length === obj2.length;
 }
-deepEqual(obj1, obj2);
 
-// console.log(obj1 === obj2);
+const obj1 = {
+    s: null,
+    'b': 1,
+    a: 'k',
+    f: undefined,
+    go: {},
+    name: 'Tim',
+    isValid: function() {
+        return !!this.name && !this.name.startsWith(' ');
+    },
+    codes: {
+        "7": "Россия",
+        "38": "Украина",
+        "1": "США"
+    }
+};
+const obj2 = {
+    s: null,
+    'b': 1,
+    a: 'k',
+    f: undefined,
+    go: {},
+    name: 'Tim',
+    isValid: function() {
+        return !!this.name && !this.name.startsWith('s ');
+    },
+    codes: {
+        "7": "Россия",
+        "38": "Украина",
+        "1": "США"
+    }
+};
 
-
+console.log('deepEqual ' + deepEqual(obj1, obj2));
+alert(obj1.length);
+// console.log('Equal'+ obj1 === obj2);
