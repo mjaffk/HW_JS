@@ -25,7 +25,7 @@ const obj = {
      */
     addClass: function (cls) {
         let classes = (this.className) ? this.className.split(' ') : [];
-        for (i of classes) {
+        for (let i of classes) {
             if (classes[i] === cls) return;
         }
         classes.push(cls);
