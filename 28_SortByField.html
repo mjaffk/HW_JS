@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<!-- By Ekaterina Khorina -->
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="28_SortByField.css">
+
+</head>
+
+<body>
+<div class="js-app">
+    <h3>Sort by field</h3>
+
+    <p>
+        Дан массив объектов
+    <pre>
+          <code>
+let users = [
+  { name: "John", age: 20, surname: "Johnson" },
+  { name: "Pete", age: 18, surname: "Peterson" },
+  { name: "Ann", age: 19, surname: "Hathaway" }
+];
+          </code>
+        </pre>
+    </p>
+
+    <p>
+        Для сортировки элементов в нем можно использовать метод массива sort
+    <pre>
+          <code>
+// by name (Ann, John, Pete)
+users.sort((a, b) => a.name > b.name ? 1 : -1);
+
+// by age (Pete, Ann, John)
+users.sort((a, b) => a.age > b.age ? 1 : -1);
+          </code>
+        </pre>
+    </p>
+
+    <p>1. Напишите функцию <i>byField</i>,
+        которая поможет сделать этот код более читаемым.</p>
+    <pre>
+        <code>
+users.sort(byField('name'));
+users.sort(byField('age'));
+        </code>
+      </pre>
+
+    <p>2. Результат выведите в виде HTML таблицы с помощью функции
+        <i>renderTable</i>.</p>
+
+</div>
+<script src="28_SortByField.js"></script>
+</body>
+
+</html>

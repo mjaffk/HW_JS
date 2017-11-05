@@ -16,11 +16,10 @@
  */
 function SumToCycle(n) {
     let result = 0;
-    for (; !!n ; n-- ){
+    for (; !!n; n--) {
         result += n;
     }
     return result;
-    // return n;
 }
 
 /**
@@ -31,7 +30,7 @@ function SumToCycle(n) {
  */
 function sumToRecursion(n) {
     if (n !== 1) {
-        return n + sumToRecursion(n-1);
+        return n + sumToRecursion(n - 1);
     }
     return n;
 }
@@ -44,7 +43,6 @@ function sumToRecursion(n) {
  */
 function sumToFormula(n) {
     return n * (1 + n) / 2;
-    // return n;
 }
 
 /**
@@ -59,9 +57,8 @@ function isNumber(num) {
 
 let n;
 
-//Получаем натуральное число n
 do {
-    n = prompt('Введите n');
+    n = prompt('Введите натуральное n');
 } while (!isNumber(n) || +n !== parseInt(n, 10) || +n <= 0);
 n = +n;
 
@@ -86,9 +83,9 @@ t1 = window.performance.now();
 let timeSumToFormula = (t1 - t0).toFixed(2);
 
 
-alert( 'Сумма натуральных до '+ n + ' при расчете циклом равна '
+console.log('Сумма натуральных до ' + n + ' при расчете циклом равна '
     + resultSumToCycle + ', рассчитано за ' + timeSumToCycle + 'мс\n\n'
-    + 'Сумма натуральных до '+ n + ' при расчете рекурсией равна '
+    + 'Сумма натуральных до ' + n + ' при расчете рекурсией равна '
     + resultSumToRecursion + ', рассчитано за ' + timeSumToRecursion + 'мс\n\n'
-    + 'Сумма натуральных до '+ n + ' при расчете по формуле равна '
+    + 'Сумма натуральных до ' + n + ' при расчете по формуле равна '
     + resultSumToFormula + ', рассчитано за ' + timeSumToFormula + 'мс');
