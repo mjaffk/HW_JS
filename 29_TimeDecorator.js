@@ -12,9 +12,8 @@ function foo () {
 function timeDecorator (func) {
     return function (...args) {
         let timeStart = Date.now();
-        let result = func(args).apply(this);
-        let timeEnd = Date.now();
-        console.log((timeEnd - timeStart) + 'ms');
+        let result = func.apply(this, args);
+        console.log('Время выполнения функции ' + func.name + ': ' + (Date.now() - timeStart) + 'ms');
         return result;
     };
 }
