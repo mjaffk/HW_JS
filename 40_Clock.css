@@ -1,0 +1,18 @@
+.hour {
+    color: red
+}
+
+.min {
+    color: green
+}
+
+.sec {
+    color: blue
+}
+
+#clock,
+#clock_berlin,
+#clock_moscow {
+    font-size: large;
+}
+
