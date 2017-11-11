@@ -1,18 +1,11 @@
-.hour {
+.clock__hour {
     color: red
 }
 
-.min {
+.clock__min {
     color: green
 }
 
-.sec {
+.clock__sec {
     color: blue
 }
-
-#clock,
-#clock_berlin,
-#clock_moscow {
-    font-size: large;
-}
-

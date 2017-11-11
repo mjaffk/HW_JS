@@ -1,0 +1,8 @@
+.expired {
+    color: red;
+    text-decoration: line-through;
+}
+
+.almost-expired {
+    color: #ff9f1f;
+}
