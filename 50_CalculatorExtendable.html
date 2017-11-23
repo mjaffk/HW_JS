@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<!-- By Ekaterina Khorina -->
+<head>
+    <meta charset="UTF-8">
+    <a href="https://learn.javascript.ru/task/calculator-extendable" target="_blank">Ссылка на задачу</a>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/4.0.1/mocha.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/4.0.1/mocha.js"></script>
+    <script>
+        mocha.setup('bdd');
+    </script>
+    <script src="http://chaijs.com/chai.js"></script>
+    <script>
+        let assert = chai.assert;
+    </script>
+</head>
+<body>
+<script src="50_CalculatorExtendable.js"></script>
+<script src="50_Test_CalculatorExtendable.js"></script>
+<div id="mocha"></div>
+<script>
+    mocha.run();
+</script>
+</body>
+</html>

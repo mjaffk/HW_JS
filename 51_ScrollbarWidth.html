@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<!-- By Ekaterina Khorina -->
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/4.0.1/mocha.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/4.0.1/mocha.js"></script>
+        <script>
+            mocha.setup( 'bdd' );
+        </script>
+
+        <script src="http://chaijs.com/chai.js"></script>
+        <script>
+            let assert = chai.assert;
+        </script>
+
+    </head>
+    <body>
+        <div>
+            <a href="https://learn.javascript.ru/task/scrollbar-width" target="_blank">Ссылка на задачу в учебнике</a>
+        </div>
+        <script src="51_ScrollbarWidth.js"></script>
+        <script src="51_Test_ScrollbarWidth.js"></script>
+
+        <div id="mocha"></div>
+        <script>
+            mocha.run();
+        </script>
+    </body>
+</html>

@@ -10,6 +10,7 @@
 Предусматривать обработку нечисловых строк в этой задаче необязательно.
  */
 
+let newNumber = null;
 do {
-    var newNumber = prompt('Введите число, большее 100', "");
-} while (newNumber <= 100 && newNumber != null);
+    newNumber = prompt('Введите число, большее 100', "");
+} while (newNumber <= 100 && newNumber !== null);

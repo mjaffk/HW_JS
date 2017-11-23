@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<!-- By Ekaterina Khorina -->
+<head>
+    <meta charset="UTF-8">
+    <title>JS-HW</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/4.0.1/mocha.css">
+    <link rel="stylesheet" href="53_PutBallInCenter.css">
+    <style>
+        .link {
+            padding: 15px;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/4.0.1/mocha.js"></script>
+    <script>
+        mocha.setup( 'bdd' );
+    </script>
+    <script src="http://chaijs.com/chai.js"></script>
+    <script>
+        let assert = chai.assert;
+    </script>
+</head>
+<body>
+<div class="link">
+    <a href="https://learn.javascript.ru/task/put-ball-in-center" target="_blank">Ссылка на задачу в учебнике</a>
+</div>
+<div id="field">
+    <img src="https://js.cx/clipart/ball.svg" id="ball"> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+</div>
+<script src="53_PutBallInCenter.js"></script>
+<div id="mocha"></div>
+<script>
+    mocha.run();
+</script>
+</body>
+</html>

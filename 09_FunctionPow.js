@@ -1,13 +1,12 @@
 'use strict';
+/* By Khorina Ekaterina */
 
-/*
-Напишите функцию pow(x,n), которая возвращает x в степени n.
-Иначе говоря, умножает x на себя n раз и возвращает результат.
-Создайте страницу, которая запрашивает x и n, а затем выводит результат pow(x,n).
-P.S. В этой задаче функция обязана поддерживать только натуральные значения n,
-т.е. целые от 1 и выше.
-*/
-
+/**
+ * Возвращает x в степени n
+ * @param {number} x - число
+ * @param {number} n - целое положительное число
+ * @return {*}
+ */
 function pow(x, n) {
     if (n !== 1) {
         return x* +pow(x, n-1);
@@ -15,19 +14,23 @@ function pow(x, n) {
     return x;
 }
 
+/**
+ * Проверяет является ли полученная переменная числом
+ * @param num
+ * @return {boolean}
+ */
 function isNumber(num) {
     return !isNaN(parseFloat(num)) && isFinite(num);
 }
 
-var x;
+let x;
 do {
-    x = prompt('Введите x');
-//} while (x === null || +x || x !== '0' || +x === 0 );
+    x = prompt('Введите число x');
 } while (!isNumber(x));
 
-var n;
+let n;
 do {
-    n = prompt('Введите n');
+    n = prompt('Введите натуральное число n');
 } while (!isNumber(n) || +n !== parseInt(n, 10) || +n <= 0);
 
 alert( x +' в степени '+ n + ' равно ' + pow(+x,+n));
