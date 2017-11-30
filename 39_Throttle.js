@@ -86,22 +86,19 @@ function throttle2( func, ms ) {
         savedThis = null;
     
     return function wrapper( ...args ) {
-        
+
         if ( isThrottled ) {
             savedArgs = args;
             savedThis = this;
             return;
         }
-        
+
         isThrottled = true;
-        
+
         setTimeout(() => {
             isThrottled = false;
-
             if ( savedArgs ) {
-
                 wrapper.apply ( savedThis, savedArgs );
-
                 savedArgs = null;
                 savedThis = null;
             }
